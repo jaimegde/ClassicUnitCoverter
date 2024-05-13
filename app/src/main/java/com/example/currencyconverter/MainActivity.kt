@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    CurrencyConverter()
+                    UnitConverter()
                 }
             }
         }
@@ -33,31 +33,24 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun CurrencyConverter(){
+fun UnitConverter(){
     Column {
         //stacked below each other
         Text("Unit Converter")
-        OutlinedTextField(value = "", onValueChange = {})
+        OutlinedTextField(value = "", onValueChange = {
+
+        })
         Row {
             //stacked next to each other
 
         }
+        Text("Result: ")
     }
 }
 
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
 
 @Preview(showBackground = true)
 @Composable
-fun GreetingPreview() {
-    CurrencyConverterTheme {
-        Greeting("Android")
-    }
+fun UnitConverterPreview(){
+    UnitConverter()
 }
